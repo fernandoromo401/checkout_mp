@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <div class="row mt-5">
+        <?php foreach ($products as $product) { ?>
+            <div class="col-xl-4">
+                    <div class="card">
+                        <img src="./assets/img/<?php echo $product["imgUrl"]; ?>" height="300" alt="celular"><hr>
+                        <div class="header-card text-center">
+                            <h2><?php echo $product["name"]; ?></h2>
+                            <p><?php echo $product["description"]; ?></p>
+                            <strong>$<?php echo $product["price"]; ?></strong>
+                        </div><hr>
+                        <div class="card-action text-center">
+                            <a href="./?r=product&id=<?php echo $product["id"]; ?>" class="btn btn-primary mb-3">Seleccionar</a>
+                        </div>
+                    </div>
+                </div>
+        <?php } ?>
+    </div>
+</div>
