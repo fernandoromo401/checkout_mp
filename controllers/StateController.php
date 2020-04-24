@@ -12,7 +12,7 @@ class StateController {
 
         switch ($_POST['payment_status']) {
             case 'approved':
-                require_once('./views/ViewState/aproved.html');
+                require_once('./views/ViewState/aproved.phtml');
                 echo "<h2>apro</h2>";
                 break;
             case 'failure':
