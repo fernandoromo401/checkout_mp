@@ -17,7 +17,8 @@ class StateController {
                 require_once('./views/ViewState/pending.phtml');
                 break;
             default:
-                
+                require_once('./views/ViewState/default.html');
+                break;
         }
     }
 
