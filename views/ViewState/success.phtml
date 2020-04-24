@@ -1,11 +1,14 @@
 <div style="width: 25%;" class="container mt-5 text-center">
     <div class="card">
-        <h2>Estado del Pago: <?php echo  $_POST['payment_status']; ?></h2>
+        <h2><strong>Estado del Pago: </strong><?php echo $res["status"]; ?></h2><hr>
         <div class="header-card text-center">
-            <p>Preference_ID: <?php echo  $_POST['preference_id']; ?></p>
-            <p>Payment_status: <?php echo $_POST["payment_id"]; ?></p>
-            <p>Back_url<?php echo $_POST["back_url"]; ?></p>
-            <p>si el autoreturn anduviera se podría implemetar mejor</p>
+            <p><strong>Metodo de Pago: </strong><?php echo $res["payment_method_id"]; ?></p>
+            <p><strong>Monto Pagado: </strong><?php echo $res["transaction_amount"]; ?></p>
+            <p><strong>Numero de Orden: </strong><?php echo $res["order"]["id"] ?></p>
+            <p><strong>ID de Pago: </strong><?php echo $_POST["payment_id"]; ?></p>
+            <a target="_blank" class="btn btn-primary" href="<?php echo "https://api.mercadopago.com/v1/payments/".$id."?access_token=".$token; ?>" >HTTP Request</a>
+            <hr>
+            <h3>Si el auto_return anduviera se podría implemetar mejor</h3>
         </div>
     </div>    
 </div>
