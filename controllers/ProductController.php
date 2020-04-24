@@ -81,7 +81,7 @@ class ProductController{
 
         require_once('./views/ViewProduct.phtml');
 
-       
+       echo array_keys($_POST);
         var_dump($_POST['payment_methods']);
         echo "payment id: ". $_POST['payment_id'];
     }
