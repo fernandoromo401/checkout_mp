@@ -80,6 +80,8 @@ class ProductController{
 
 
         require_once('./views/ViewProduct.phtml');
+
+      
     }
 }
 
