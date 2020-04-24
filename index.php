@@ -2,7 +2,7 @@
 <html lang="es">
 
     <?php 
-    error_reporting(0);
+    require __DIR__  . '/vendor/autoload.php';
     require_once('./config/header.html'); ?>
 
 <body>

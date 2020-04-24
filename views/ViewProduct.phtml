@@ -1,6 +1,4 @@
-<div class="container mt-5">
-    <div class="row mt-5">
-        <div class="col-xl-4">
+<div style="width: 25%;" class="container mt-5 text-center">
             <div class="card">
                 <img src="./assets/img/<?php echo $product["imgUrl"]; ?>" height="300" alt="celular">
                 <hr>
@@ -10,12 +8,15 @@
                     <h4>$<?php echo $product["price"]; ?></h4>
                 </div>
             </div>
-        </div>
-        <div class="col-xl-8">
-            <div class="container text-center">
+            <div class="mt-4 container text-center">
                 <h2 class="mb-5">Comprá con Mercado Pago</h2>
                 <div class="mt-5">
-                    <button>Pagar la compra</button>
+                    <form action="" method="POST">
+                        <script data-header-color="#2D3277" data-elements-color="#2D3277" data-button-label="Pagar la compra"
+                        src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+                        data-preference-id="<?php echo $preference->id;?>">
+                        </script>
+                    </form>
                 </div>
             </div>
         </div>
