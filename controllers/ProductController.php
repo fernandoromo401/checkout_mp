@@ -80,12 +80,6 @@ class ProductController{
 
 
         require_once('./views/ViewProduct.phtml');
-
-        var_dump(array_keys($_POST));
-        echo  $_POST['preference_id']."<br>";
-        echo  $_POST['payment_id']."<br>";
-        echo  $_POST['collection_status']."<br>";
-        echo  $_POST['payment_status']."<br>";
     }
 }
 

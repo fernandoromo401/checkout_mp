@@ -14,7 +14,11 @@ switch ($_GET['r'] || "") {
         $controllerProducts = new ProductController();
         $controllerProducts->getOne();
         break;
-    
+
+    case 'state':
+        $controllerState = new StateController();
+        $controllerState->managerState();
+        break;    
 
     default:
         $controllerProducts = new ProductController();
