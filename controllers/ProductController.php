@@ -20,7 +20,7 @@ class ProductController{
         
 
         // Agrega credenciales
-        MercadoPago\SDK::setAccessToken('TEST-107697664459793-042414-04f9cc1d61d396c5941d05feb10d037c-471923173');
+        MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
 
         $payer = new MercadoPago\Payer();
         $payer->name = "Lalo";
@@ -67,7 +67,7 @@ class ProductController{
         $urlHeroku = "https://afternoon-shelf-14643.herokuapp.com/";
 
         $preference->back_urls = array(
-          "success" => $urlHeroku."?r=success",
+          "success" => $urlHeroku."?r=success&price".$product["price"],
           "failure" => $urlHeroku."?r=failure",
           "pending" => $urlHeroku."?r=pending"
         );

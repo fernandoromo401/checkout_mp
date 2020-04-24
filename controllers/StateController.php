@@ -16,11 +16,11 @@ class StateController {
                 echo "<h2>apro</h2>";
                 break;
             case 'failure':
-                require_once('./views/ViewState/failure.html');
+                require_once('./views/ViewState/failure.phtml');
                 echo "<h2>fail</h2>";
                 break;
             case 'pending':
-                require_once('./views/ViewState/pending.html');
+                require_once('./views/ViewState/pending.phtml');
                 echo "<h2>pen</h2>";
                 break;
         }

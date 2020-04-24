@@ -2,22 +2,10 @@
     <div class="card">
         <h2>Estado del Pago: <?php echo  $_POST['payment_status']; ?></h2>
         <div class="header-card text-center">
-            <h2><?php echo $product["name"]; ?></h2>
-            <p><?php echo $product["description"]; ?></p>
-            <h4>$<?php echo $product["price"]; ?></h4>
+            <p>Preference_ID: <?php echo  $_POST['preference_id']; ?></p>
+            <p>Payment_status: <?php echo $_POST["payment_id"]; ?></p>
+            <p>Back_url<?php echo $_POST["back_url"]; ?></p>
+            <p>si el autoreturn anduviera se podría implemetar mejor</p>
         </div>
-    </div>
-    <div class="mt-4 container text-center">
-        <h2 class="mb-5">Comprá con Mercado Pago</h2>
-        <div class="mt-5">
-            <form action="" method="POST">
-                <script data-header-color="#2D3277" data-elements-color="#2D3277" data-button-label="Pagar la compra"
-                src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
-                data-preference-id="<?php echo $preference->id;?>">
-                </script>
-            </form>
-        </div>
-    </div>
-</div>
-</div>
+    </div>    
 </div>
