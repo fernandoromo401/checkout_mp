@@ -20,7 +20,7 @@ class ProductController{
         
 
         // Agrega credenciales
-        MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-090914-5c508e1b02a34fcce879a999574cf5c9-469485398');
+        MercadoPago\SDK::setAccessToken('APP_USR-107697664459793-042414-825d8416d951f5a662a3581f445ee905-471923173');
 
         $payer = new MercadoPago\Payer();
         $payer->name = "Lalo";
