@@ -78,6 +78,10 @@ class ProductController{
 
 
         require_once('./views/ViewProduct.phtml');
+
+       
+        echo  $_POST['preference_id'];
+        echo  $_POST['payment_id'];
     }
 }
 
