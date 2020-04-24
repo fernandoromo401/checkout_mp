@@ -20,6 +20,11 @@ switch ($_GET['r']) {
         $controllerState->managerState();
         break;    
 
+    case 'curl':
+        $controllerProducts = new ProductController();
+        $controllerProducts->curl();
+        break;  
+
     default:
         $controllerProducts = new ProductController();
         $controllerProducts->getAll();

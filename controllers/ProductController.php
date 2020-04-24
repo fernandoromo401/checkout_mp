@@ -72,17 +72,14 @@ class ProductController{
           "pending" => $urlHeroku."?r=pending"
         );
         $preference->auto_return = "approved";
-
+        
         $preference->save();
-
-
-
-
 
         require_once('./views/ViewProduct.phtml');
 
       
     }
+  
 }
 
 
