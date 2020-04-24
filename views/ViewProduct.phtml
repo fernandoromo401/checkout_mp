@@ -11,7 +11,7 @@
             <div class="mt-4 container text-center">
                 <h2 class="mb-5">Comprá con Mercado Pago</h2>
                 <div class="mt-5">
-                    <form action="./?r=product&id=<?php echo $product["id"]; ?>" method="POST">
+                    <form action="./?r=success" method="GET">
                         <script data-header-color="#2D3277" data-elements-color="#2D3277" data-button-label="Pagar la compra"
                         src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
                         data-preference-id="<?php echo $preference->id;?>">
