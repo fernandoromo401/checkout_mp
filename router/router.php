@@ -1,9 +1,9 @@
 <?php
 require_once('./controllers/ProductController.php');
+require_once('./controllers/StateController.php');
 
 
-
-switch ($_GET['r'] || "") {
+switch ($_GET['r']) {
     
     case '':
         $controllerProducts = new ProductController();

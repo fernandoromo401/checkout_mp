@@ -4,11 +4,14 @@ class StateController {
 
     public function managerState(){
 
-        var_dump(array_keys($_POST)."<br>");
-
-        switch ($_POST['payment_status']) {
+        $request = $_POST['payment_status'];
+        if (!$request) {
+            $request = 'default';
+        }
+        
+        switch ($request) {
             case 'approved':
-                require_once('./views/ViewState/aproved.phtml');
+                require_once('./views/ViewState/success.phtml');
                 break;
             case 'failure':
                 require_once('./views/ViewState/failure.phtml');
@@ -16,7 +19,7 @@ class StateController {
             case 'pending':
                 require_once('./views/ViewState/pending.phtml');
                 break;
-            default:
+            case 'default':
                 require_once('./views/ViewState/default.html');
                 break;
         }
