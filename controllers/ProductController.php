@@ -64,10 +64,12 @@ class ProductController{
             )
         );
 
+        $urlHeroku = "https://afternoon-shelf-14643.herokuapp.com/";
+
         $preference->back_urls = array(
-          "success" => "http://localhost/mercado_pago/?r=success",
-          "failure" => "http://localhost/mercado_pago/?r=failure",
-          "pending" => "http://localhost/mercado_pago/?r=pending"
+          "success" => $urlHeroku."?r=success",
+          "failure" => $urlHeroku."?r=failure",
+          "pending" => $urlHeroku."?r=pending"
         );
         $preference->auto_return = "approved";
 
@@ -80,7 +82,7 @@ class ProductController{
         require_once('./views/ViewProduct.phtml');
 
        
-        echo  $_POST['preference_id'];
+        echo  $_POST['preference_id']. "-------------";
         echo  $_POST['payment_id'];
     }
 }
